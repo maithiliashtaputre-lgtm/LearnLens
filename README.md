@@ -20,11 +20,11 @@ The current objective of LearnLens is:
 
 The model currently uses the following features:
 
-- 📖 Study Hours Per Day
-- 🎯 Extracurricular Hours Per Day
-- 😴 Sleep Hours Per Day
-- 🧑‍🤝‍🧑 Social Hours Per Day
-- 🏃 Physical Activity Hours Per Day
+-  Study Hours Per Day
+-  Extracurricular Hours Per Day
+-  Sleep Hours Per Day
+-  Social Hours Per Day
+-  Physical Activity Hours Per Day
 
 The target variable is:
 
