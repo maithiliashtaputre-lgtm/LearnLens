@@ -21,34 +21,40 @@ The current objective of LearnLens is:
 The model currently uses the following features:
 
 -  Study Hours Per Day
--  Extracurricular Hours Per Day
--  Sleep Hours Per Day
--  Social Hours Per Day
 -  Physical Activity Hours Per Day
+-  Sleep Hours Per Day
+-  Attendance percentage
+-  Previous Exam Score
 
 The target variable is:
 
-- 🎓 **GPA**
+- 🎓 **CGPA**
 
 ---
 
 ## 📊 Dataset
 
-LearnLens currently uses a real student lifestyle dataset containing:
+LearnLens currently uses a **synthetic student academic performance dataset** containing 2,000 records. The dataset was created for developing and testing the initial machine learning model.
 
-- **2,000 student records**
-- **8 columns**
+It includes five input features related to students' daily habits and academic performance:
 
-The original dataset contains:
+| Feature | Description |
+|---|---|
+| Study Hours Per Day | Average hours spent studying daily |
+| Physical Activity Hours Per Day | Average hours spent on physical activities daily |
+| Sleep Hours Per Day | Average hours of sleep per day |
+| Attendance Percentage | Percentage of classes attended |
+| Previous Exam Score | Score obtained in a previous examination |
 
-- `Student_ID`
-- `Study_Hours_Per_Day`
-- `Extracurricular_Hours_Per_Day`
-- `Sleep_Hours_Per_Day`
-- `Social_Hours_Per_Day`
-- `Physical_Activity_Hours_Per_Day`
-- `GPA`
-- `Stress_Level`
+**Target variable:** CGPA, represented on a 0–10 scale.
+
+### Data Source and Limitations
+
+The current dataset is synthetically generated and does not contain verified records collected from real students. Its values are based on assumed relationships between the input features and CGPA, with variation added to simulate differences between students.
+
+Therefore, model performance on this dataset should not be interpreted as evidence of accuracy on real-world student data.
+
+Future development aims to evaluate LearnLens using suitable real-world student academic datasets, subject to data availability, quality, and privacy considerations.
 
 ### Features Used
 
@@ -56,7 +62,7 @@ For the current Linear Regression model:
 
 ```text
 Study_Hours_Per_Day
-Extracurricular_Hours_Per_Day
+Physical Activity_Hours_Per_Day
 Sleep_Hours_Per_Day
-Social_Hours_Per_Day
-Physical_Activity_Hours_Per_Day
+Attendance_Percentage
+Previous_Exam_Score
