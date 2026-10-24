@@ -1,12 +1,4 @@
 from fastapi.middleware.cors import CORSMiddleware
-app = FastAPI(title="LearnLens API")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"]
-)
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 import joblib
@@ -14,6 +6,15 @@ import pandas as pd
 
 # Create the API
 app = FastAPI(title="LearnLens API")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 # Load the trained model
 saved_data = joblib.load("learnlens_model.pkl")
